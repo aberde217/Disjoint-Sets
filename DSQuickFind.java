@@ -7,6 +7,7 @@ public class DSQuickFind implements DisjointSet {
             ds[i] = i;
         }
     }
+    @Override
     public void connect(int x, int y) {
         int yRoot = ds[y];
         int xRoot = ds[x];
@@ -16,7 +17,7 @@ public class DSQuickFind implements DisjointSet {
                 ds[i] = yRoot;
         }
     }
-
+    @Override
     public boolean isConnected(int x, int y) {
         return ds[y] == ds[x];
     }
