@@ -4,7 +4,7 @@ public class DSQuickUnion implements DisjointSet {
     public DSQuickUnion(int size) {
         ds = new int[size];
         for (int i = 0; i < ds.length; i++) {
-            ds[i] = i;
+            ds[i] = -1;
         }
     }
 
