@@ -1,6 +1,8 @@
 public class DSWeightedQuickUnion implements DisjointSet {
     private int ds[];
     private int setSize[];
+    
+    /*Time Complexity: θ(N)*/
     public DSWeightedQuickUnion(int size) {
         ds = new int[size];
         setSize = new int[size];
@@ -18,6 +20,7 @@ public class DSWeightedQuickUnion implements DisjointSet {
         return next;
     }
     
+    /*Time Complexity: O(log N)*/
     @Override
     public void connect(int x, int y) {
         int xParent = findParent(x);
@@ -32,7 +35,8 @@ public class DSWeightedQuickUnion implements DisjointSet {
         }
 
     }
-
+    
+    /*Time Complexity: O(log N)*/
     @Override
     public boolean isConnected(int x, int y) {
         return findParent(x) == findParent(y);
